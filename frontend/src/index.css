@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Floating Animation */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes floatSlow {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-15px) rotate(2deg); }
+}
+
+/* Flutter Animation */
+@keyframes flutter {
+  0%, 100% { transform: rotate(0deg) scale(1); }
+  25% { transform: rotate(1deg) scale(1.05); }
+  75% { transform: rotate(-1deg) scale(0.95); }
+}
+
+/* Pulse Glow */
+@keyframes pulseGlow {
+  0%, 100% { box-shadow: 0 0 20px rgba(59, 130, 246, 0.3); }
+  50% { box-shadow: 0 0 40px rgba(59, 130, 246, 0.6); }
+}
+
+/* Gradient Animation */
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Bounce In */
+@keyframes bounceIn {
+  0% { transform: scale(0.3) translateY(-50px); opacity: 0; }
+  50% { transform: scale(1.1) translateY(-10px); opacity: 0.8; }
+  100% { transform: scale(1) translateY(0); opacity: 1; }
+}
+
+/* Slide In */
+@keyframes slideInUp {
+  0% { transform: translateY(100px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+/* Animation Classes */
+.float { animation: float 3s ease-in-out infinite; }
+.float-slow { animation: floatSlow 4s ease-in-out infinite; }
+.flutter { animation: flutter 2s ease-in-out infinite; }
+.pulse-glow { animation: pulseGlow 2s ease-in-out infinite; }
+.gradient-shift {
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradientShift 4s ease infinite;
+}
+.bounce-in { animation: bounceIn 0.8s ease-out; }
+.slide-in-up { animation: slideInUp 0.6s ease-out; }
+
+/* Cursor Trail */
+.cursor-trail {
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.8) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 9999;
+  transition: transform 0.1s ease-out;
+}
+
+/* Hover Effects */
+.hover-lift {
+  transition: all 0.3s ease;
+}
+.hover-lift:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Background Particles */
+.particles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.particle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: rgba(59, 130, 246, 0.3);
+  border-radius: 50%;
+  animation: float 6s ease-in-out infinite;
+}

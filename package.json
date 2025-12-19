@@ -1,0 +1,12 @@
+{
+  "name": "jobboard",
+  "version": "1.0.0",
+  "description": "JobBoard - MERN Mini Job Portal",
+  "scripts": {
+    "dev:frontend": "cd frontend && npm run dev",
+    "dev:backend": "cd backend && npm run dev"
+  },
+  "keywords": ["mern", "job-portal", "react", "express", "mongodb"],
+  "author": "",
+  "license": "MIT"
+}
